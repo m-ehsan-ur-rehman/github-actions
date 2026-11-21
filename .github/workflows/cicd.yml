@@ -1,4 +1,4 @@
-name: CICD
+name:  
 
 on: workflow_dispatch
 
@@ -9,16 +9,19 @@ jobs:
     - name: "Cloning the code from github"
       run: echo "Cloning......"
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
     - name: "Building the image"
       run: echo "building docker image"
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
     - name: "Testing the code"
       run: echo "Testingggg...."
   deploy:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
      - name: "Deploying the code"
