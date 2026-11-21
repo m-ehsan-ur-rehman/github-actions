@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Building the image"
-      run: echo "building docker image
+      run: echo "building docker image"
   test:
     runs-on: ubuntu-latest
     steps:
