@@ -2,7 +2,7 @@
 # lets run action
 # importing calendar module
 import calendar
-import os
+
 yy = 2014  # year
 mm = 11    # month
 
@@ -12,4 +12,4 @@ mm = 11    # month
 
 # display the calendar
 print(calendar.month(yy, mm))
-print("ehsan")
+
