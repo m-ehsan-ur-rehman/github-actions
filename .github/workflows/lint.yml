@@ -1,0 +1,17 @@
+#linter for checking code indentation,errors and bugs.
+#as a user commit changes in a python file linter should check it.
+#workflow
+name: linter
+on:
+  push:
+    paths: "*.py"
+    
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkouts code
+        uses: actions/checkout@v7
+      - name: installs linter
+        run: pip install ruff
+    
