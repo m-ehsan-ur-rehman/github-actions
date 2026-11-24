@@ -7,11 +7,12 @@ on:
     paths: "*.py"
     
 jobs:
-  code:
+  code-linter:
     runs-on: ubuntu-latest
     steps:
       - name: checkouts code
         uses: actions/checkout@v7
       - name: installs linter
         run: pip install ruff
-    
+      - name: check the files for linting
+        run: ruff check .
